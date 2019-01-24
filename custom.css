@@ -1,0 +1,42 @@
+p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 27px;
+  font-size: 18px;
+  color: #2D3138;
+}
+
+h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 48px;
+  color: #2D3138;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.git main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+/*# sourceMappingURL=custom.css.map */

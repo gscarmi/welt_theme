@@ -3,32 +3,141 @@ $fonth:    Poppins, sans-serif
 
 $accento: #BE8C81
 $primario: #8A9FB2
-$primariochiaro: #BE8C81
+$primariochiaro: #A5B9C3
 $quasinero: #2D3138
-$quasibianco: #DDE0D5
+$quasibianco: #ffffff
+
+$a-tags: 'a, a:active, a:hover, a:visited'
+$a-tags-hover: 'a:active, a:hover'
+ 
+#{$a-tags} 
+  color: $primario
+  text-decoration: none
+
+#{$a-tags-hover} 
+  color: $primariochiaro
+
 
 p 
+    font-family: Open Sans
+    font-style: normal
+    font-weight: normal
+    line-height: 24px
+    font-size: 18px
+    color: $quasinero
+    margin-bottom: 0.5em
+
+    
+h1 
+    font-family: Poppins
+    font-style: normal
+    font-weight: bold
+    line-height: normal
+    font-size: 48px
+    color: $quasinero
+    margin: 0.5em 0 0 0
+
+.has-large-font-size
     font-family: Open Sans;
     font-style: normal;
     font-weight: normal;
-    line-height: 27px;
-    font-size: 18px;
+    line-height: 24px;
+    font-size: 24px;
     color: $quasinero;
+
+   
+
+.site
+    display: grid
+    grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ."  "footer footer footer footer footer footer footer" 
+    grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr
+    justify-items: center
+
+.site-branding
+    grid-area: logo
+    align-self: end
+    justify-self: start
+    .custom-logo
+        width: 120px
+        
+ 
+.main-navigation 
+    grid-area: nav
+    width: auto
+    justify-self: end
+    align-self: end
+
+.site-title
+    display: none
+
+.site-description
+    display: none
+
+
+
+nav li 
+    font-family: Poppins
+    font-style: normal
+    font-weight: 300
+    line-height: normal
+    font-size: 1.2em
+    margin: 0.2em 0.7em
+    text-align: center
+    color: #131313
+
+.banner
+    grid-area: banner
+    background: url(/../wp-content/uploads/2019/01/banner.jpg) no-repeat top center
+    background-size: cover
+    align-self: stretch
+    justify-self: stretch
+    min-height: 70vh
+    padding: 3em 
     
-h1 
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
-    font-size: 48px;
-    color: $quasinero;
+    .banner-quote
+        font-size: 1.4em
+        color: white
+        width: 40%
+        margin: auto
+        text-align: center
+        font-weight: normal
 
-header 
-    display: flex
-    justify-content: space-evenly
-    align-items: flex-end
+.site-main
+    grid-area: main
+   
+.site-footer
+    grid-area: footer
+    background-color: $quasinero
+    align-self: stretch
+    justify-self: stretch
 
-.git main-navigation 
-    display: flex
-    justify-content: space-evenly
-    align-items: flex-end
+
+.entry-content
+    margin: 0
+
+div.wpcf7
+    background: url(/../wp-content/uploads/2019/01/bg-form.jpg) no-repeat top center
+    background-size: cover
+    padding: 3em
+    color: $quasibianco
+
+    h1
+        color: $quasibianco
+    p
+        color: $quasibianco
+
+    .wpcf7-submit  
+        border: 3px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 1em;
+        text-align: center;
+        color: #FFFFFF;
+        background: none
+        width: 30%
+        margin-left: auto
+

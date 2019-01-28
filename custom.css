@@ -1,10 +1,20 @@
+a, a:active, a:hover, a:visited {
+  color: #8A9FB2;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  color: #A5B9C3;
+}
+
 p {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
-  line-height: 27px;
+  line-height: 24px;
   font-size: 18px;
   color: #2D3138;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -14,29 +24,153 @@ h1 {
   line-height: normal;
   font-size: 48px;
   color: #2D3138;
+  margin: 0.5em 0 0 0;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.has-large-font-size {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 24px;
+  font-size: 24px;
+  color: #2D3138;
 }
 
-.git main-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.site {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ."  "footer footer footer footer footer footer footer";
+  -ms-grid-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
+      grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
+  justify-items: center;
+}
+
+.site-branding {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.site-branding .custom-logo {
+  width: 120px;
+}
+
+.main-navigation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-area: nav;
+  width: auto;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.site-title {
+  display: none;
+}
+
+.site-description {
+  display: none;
+}
+
+nav li {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 1.2em;
+  margin: 0.2em 0.7em;
+  text-align: center;
+  color: #131313;
+}
+
+.banner {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-area: banner;
+  background: url(/../wp-content/uploads/2019/01/banner.jpg) no-repeat top center;
+  background-size: cover;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  min-height: 70vh;
+  padding: 3em;
+}
+
+.banner .banner-quote {
+  font-size: 1.4em;
+  color: white;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  font-weight: normal;
+}
+
+.site-main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-area: main;
+}
+
+.site-footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-area: footer;
+  background-color: #2D3138;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+}
+
+.entry-content {
+  margin: 0;
+}
+
+div.wpcf7 {
+  background: url(/../wp-content/uploads/2019/01/bg-form.jpg) no-repeat top center;
+  background-size: cover;
+  padding: 3em;
+  color: #ffffff;
+}
+
+div.wpcf7 h1 {
+  color: #ffffff;
+}
+
+div.wpcf7 p {
+  color: #ffffff;
+}
+
+div.wpcf7 .wpcf7-submit {
+  border: 3px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 1em;
+  text-align: center;
+  color: #FFFFFF;
+  background: none;
+  width: 30%;
+  margin-left: auto;
 }
 /*# sourceMappingURL=custom.css.map */

@@ -18,17 +18,18 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Poppins:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<link rel="stylesheet" href="wp-content/themes/welt_theme/custom.css" >
 
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="wp-content/themes/welt_theme/custom.css" >
+
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'welt_theme' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	
+	<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -47,7 +48,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+	<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'welt_theme' ); ?></button>
 			<?php
 			wp_nav_menu( array(
@@ -55,7 +56,5 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	</nav><!-- #site-navigation -->
 
-	<div id="content" class="site-content">

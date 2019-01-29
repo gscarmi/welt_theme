@@ -45,11 +45,13 @@ h1
     font-size: 24px;
     color: $quasinero;
 
-   
+.post
+.page
+    margin: 0
 
 .site
     display: grid
-    grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ."  "footer footer footer footer footer footer footer" 
+    grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ." "form form form form form form form"  "footer footer footer footer footer footer footer" 
     grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr
     justify-items: center
 
@@ -104,18 +106,56 @@ nav li
 
 .site-main
     grid-area: main
+    
+
+.form-contattaci
+    grid-area: form
+    align-self: stretch
+    justify-self: stretch
+    display: grid
+    grid-template-areas: ". contattaci ."
+    grid-template-columns: 2fr 8fr 2fr
+
+    .wpcf7
+        grid-area: contattaci
+
    
 .site-footer
     grid-area: footer
     background-color: $quasinero
     align-self: stretch
     justify-self: stretch
+    display: grid
+    grid-template-areas: ". footercontent ." ". siteinfo ."
+    grid-template-columns: 2fr 8fr 2fr
+
+    h3 
+        font-family: Poppins
+        font-style: normal
+        font-weight: 500
+        line-height: 0.5em
+        font-size: 1.7em
+        text-align: center
+        color: $quasibianco
+
+    .contact-info
+        grid-area: footercontent
+        margin-bottom: 3em
+
+        .logo-white
+            width: 100px
+
+    .site-info
+        grid-area: siteinfo
+        text-align: center
+
+    
 
 
 .entry-content
     margin: 0
 
-div.wpcf7
+.form-contattaci
     background: url(/../wp-content/uploads/2019/01/bg-form.jpg) no-repeat top center
     background-size: cover
     padding: 3em

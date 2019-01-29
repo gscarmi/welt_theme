@@ -36,10 +36,14 @@ h1 {
   color: #2D3138;
 }
 
+.page {
+  margin: 0;
+}
+
 .site {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ."  "footer footer footer footer footer footer footer";
+      grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ." "form form form form form form form"  "footer footer footer footer footer footer footer";
   -ms-grid-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
       grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
   justify-items: center;
@@ -124,39 +128,93 @@ nav li {
   grid-area: main;
 }
 
-.site-footer {
+.form-contattaci {
   -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-area: form;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". contattaci .";
+  -ms-grid-columns: 2fr 8fr 2fr;
+      grid-template-columns: 2fr 8fr 2fr;
+}
+
+.form-contattaci .wpcf7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: contattaci;
+}
+
+.site-footer {
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: footer;
   background-color: #2D3138;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
+  -ms-grid-row-align: stretch;
       align-self: stretch;
   -ms-grid-column-align: stretch;
       justify-self: stretch;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". footercontent ." ". siteinfo .";
+  -ms-grid-columns: 2fr 8fr 2fr;
+      grid-template-columns: 2fr 8fr 2fr;
+}
+
+.site-footer h3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.5em;
+  font-size: 1.7em;
+  text-align: center;
+  color: #ffffff;
+}
+
+.site-footer .contact-info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: footercontent;
+  margin-bottom: 3em;
+}
+
+.site-footer .contact-info .logo-white {
+  width: 100px;
+}
+
+.site-footer .site-info {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: siteinfo;
+  text-align: center;
 }
 
 .entry-content {
   margin: 0;
 }
 
-div.wpcf7 {
+.form-contattaci {
   background: url(/../wp-content/uploads/2019/01/bg-form.jpg) no-repeat top center;
   background-size: cover;
   padding: 3em;
   color: #ffffff;
 }
 
-div.wpcf7 h1 {
+.form-contattaci h1 {
   color: #ffffff;
 }
 
-div.wpcf7 p {
+.form-contattaci p {
   color: #ffffff;
 }
 
-div.wpcf7 .wpcf7-submit {
+.form-contattaci .wpcf7-submit {
   border: 3px solid #FFFFFF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

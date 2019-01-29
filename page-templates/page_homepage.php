@@ -8,7 +8,7 @@
  */
 
 get_header();
-get_template_part( 'template-parts/content', 'banner	' );
+get_template_part( 'template-parts/content', 'banner' );
 ?>
 
 		<main id="main" class="site-main">
@@ -28,6 +28,8 @@ get_template_part( 'template-parts/content', 'banner	' );
 		?>
 
 		</main><!-- #main -->
-
+		<div id="contattaci-home" class="form-contattaci">
+			<?php echo do_shortcode( '[contact-form-7 id="42" title="Modulo di contatto"]' ); ?>
+		</div>
 <?php
 get_footer();

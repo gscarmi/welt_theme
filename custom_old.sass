@@ -11,11 +11,11 @@ $a-tags: 'a, a:active, a:hover, a:visited'
 $a-tags-hover: 'a:active, a:hover'
  
 #{$a-tags} 
-  color: $quasibianco
+  color: $primario
   text-decoration: none
 
 #{$a-tags-hover} 
-  color: $accento
+  color: $primariochiaro
 
 
 p 
@@ -52,31 +52,14 @@ h1
 
 .site
     display: grid
-    grid-template-areas: "top top top top top top top" ". main main main main main ." "form form form form form form form"  "footer footer footer footer footer footer footer" 
+    grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ." "form form form form form form form"  "footer footer footer footer footer footer footer" 
     grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr
     justify-items: center
 
-.top-area
-    grid-area: top
-    height: 100vh
-    background: url(/../wp-content/uploads/2019/01/banner.jpg) no-repeat center center
-    background-size: cover
-    align-self: start
-    justify-self: stretch
-    display: grid
-    grid-template-areas: ". logo nav ." "banner banner banner banner"
-    grid-template-columns: 1fr 2fr 8fr 1fr
-    grid-template-rows: 180px auto
-    
-     
-
 .site-branding
     grid-area: logo
-    align-self: center
-    justify-self: center
-    text-align: center
-    
-
+    align-self: end
+    justify-self: start
     .custom-logo
         width: 100px
         
@@ -85,25 +68,13 @@ h1
     grid-area: nav
     width: auto
     justify-self: end
-    align-self: center
-    border-bottom: solid 5px $quasibianco
-    
-
-
+    align-self: end
 
 .site-title
     display: none
 
 .site-description
-    
-    font-family: Poppins
-    font-style: normal
-    font-weight: 300
-    line-height: normal
-    font-size: 1.3em
-    margin: 0.2em 0.5em
-    text-align: center
-    color: $quasibianco
+    display: none
 
 
 
@@ -113,28 +84,26 @@ nav li
     font-weight: 300
     line-height: normal
     font-size: 1.3em
-    margin: 0.2em 0.5em
+    margin: 0.2em 0.7em
     text-align: center
-    color: $quasibianco
-    
+    color: #131313
 
 .banner
     grid-area: banner
+    background: url(/../wp-content/uploads/2019/01/banner.jpg) no-repeat top center
+    background-size: cover
+    align-self: stretch
+    justify-self: stretch
+    min-height: 50vh
+    padding: 3em 
+    
     .banner-quote
-        font-size: 2em
-        font-style: normal
-        font-weight: 700
+        font-size: 1.4em
         color: white
-        width: 60%
-        padding: 1em 2em 1em 3em 
-        
+        width: 40%
+        margin: auto
         text-align: center
         font-weight: normal
-        margin: 4em auto 0 auto
-        background: rgba(190, 140, 129, 0.80)
-        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-
-
 
 .site-main
     grid-area: main

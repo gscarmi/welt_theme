@@ -1,10 +1,10 @@
 a, a:active, a:hover, a:visited {
-  color: #ffffff;
+  color: #8A9FB2;
   text-decoration: none;
 }
 
 a:active, a:hover {
-  color: #BE8C81;
+  color: #A5B9C3;
 }
 
 p {
@@ -44,43 +44,21 @@ h1 {
 .site {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "top top top top top top top" ". main main main main main ." "form form form form form form form"  "footer footer footer footer footer footer footer";
+      grid-template-areas: ". logo nav nav nav nav ." "banner banner banner banner banner banner banner" ". main main main main main ." "form form form form form form form"  "footer footer footer footer footer footer footer";
   -ms-grid-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
       grid-template-columns: 2fr 1fr 1fr 2fr 2fr 2fr 2fr;
   justify-items: center;
-}
-
-.top-area {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
-  grid-area: top;
-  height: 100vh;
-  background: url(/../wp-content/uploads/2019/01/banner.jpg) no-repeat center center;
-  background-size: cover;
-  -ms-grid-row-align: start;
-      align-self: start;
-  -ms-grid-column-align: stretch;
-      justify-self: stretch;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: ". logo nav ." "banner banner banner banner";
-  -ms-grid-columns: 1fr 2fr 8fr 1fr;
-      grid-template-columns: 1fr 2fr 8fr 1fr;
-  -ms-grid-rows: 180px auto;
-      grid-template-rows: 180px auto;
 }
 
 .site-branding {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: logo;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  text-align: center;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: start;
+      justify-self: start;
 }
 
 .site-branding .custom-logo {
@@ -90,14 +68,14 @@ h1 {
 .main-navigation {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
   grid-area: nav;
   width: auto;
   -ms-grid-column-align: end;
       justify-self: end;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border-bottom: solid 5px #ffffff;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .site-title {
@@ -105,14 +83,7 @@ h1 {
 }
 
 .site-description {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  font-size: 1.3em;
-  margin: 0.2em 0.5em;
-  text-align: center;
-  color: #ffffff;
+  display: none;
 }
 
 nav li {
@@ -121,35 +92,38 @@ nav li {
   font-weight: 300;
   line-height: normal;
   font-size: 1.3em;
-  margin: 0.2em 0.5em;
+  margin: 0.2em 0.7em;
   text-align: center;
-  color: #ffffff;
+  color: #131313;
 }
 
 .banner {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
+  -ms-grid-column-span: 7;
   grid-area: banner;
+  background: url(/../wp-content/uploads/2019/01/banner.jpg) no-repeat top center;
+  background-size: cover;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  min-height: 50vh;
+  padding: 3em;
 }
 
 .banner .banner-quote {
-  font-size: 2em;
-  font-style: normal;
-  font-weight: 700;
+  font-size: 1.4em;
   color: white;
-  width: 60%;
-  padding: 1em 2em 1em 3em;
+  width: 40%;
+  margin: auto;
   text-align: center;
   font-weight: normal;
-  margin: 4em auto 0 auto;
-  background: rgba(190, 140, 129, 0.8);
-  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
 }
 
 .site-main {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   -ms-grid-column-span: 5;
   grid-area: main;
@@ -157,7 +131,7 @@ nav li {
 }
 
 .form-contattaci {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: form;
@@ -179,7 +153,7 @@ nav li {
 }
 
 .site-footer {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: footer;
@@ -259,4 +233,4 @@ nav li {
   width: 30%;
   margin-left: auto;
 }
-/*# sourceMappingURL=custom.css.map */
+/*# sourceMappingURL=custom_old.css.map */

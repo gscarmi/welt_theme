@@ -8,10 +8,10 @@
  */
 
 get_header();
-get_template_part( 'template-parts/content', 'banner' );
+// get_template_part( 'template-parts/content', 'banner' );
 ?>
 
-		<main id="main" class="site-main">
+	<main id="main" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
@@ -27,9 +27,9 @@ get_template_part( 'template-parts/content', 'banner' );
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-		<div id="contattaci-home" class="form-contattaci">
+	</main><!-- #main -->
+	<div id="contattaci-home" class="form-contattaci">
 			<?php echo do_shortcode( '[contact-form-7 id="42" title="Modulo di contatto"]' ); ?>
-		</div>
+	</div>
 <?php
 get_footer();

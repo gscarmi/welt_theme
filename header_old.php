@@ -28,8 +28,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'welt_theme' ); ?></a>
 
-	<div class="top-area">
-		<div class="site-branding">
+	
+	<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -48,7 +48,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+	<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'welt_theme' ); ?></button>
 			<?php
 			wp_nav_menu( array(
@@ -56,8 +56,5 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-		<div class="banner">
-        	<h1 class="banner-quote">La traduzione è quel qualcosa che trasforma tutto in modo che nulla cambi  <br /><em>- Günter Grass</em></h1>
-    	</div>
-	</div>
+	</nav><!-- #site-navigation -->
+
